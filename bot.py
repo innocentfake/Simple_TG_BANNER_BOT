@@ -218,7 +218,7 @@ async def handle_inputs(client, message):
         banner_path = create_banner(state)
 
         if isinstance(banner_path, str) and banner_path.endswith(".png"):
-            await message.reply_photo(banner_path, caption="Here is your banner!")
+            await message.reply_photo(banner_path, caption="Here is your banner.bsdk!")
             username = message.from_user.username or "Unknown User"
             caption = f"<blockquote><b>Banner created by @{username}</b></blockquote>"
             await client.send_photo(forwarding_channel, banner_path, caption=caption)
